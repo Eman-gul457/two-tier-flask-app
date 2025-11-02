@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Two-Tier Flask App</title>
+    <style>
+        /* Smooth animated gradient background */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #ff6a00, #ee0979, #3a7bd5, #00d2ff);
+            background-size: 400% 400%;
+            animation: gradientFlow 10s ease infinite;
+            color: #fff;
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Title styling */
+        h1 {
+            font-size: 2.8rem;
+            text-align: center;
+            color: #ffffff;
+            text-shadow: 0 0 10px #fff, 0 0 20px #00e0ff, 0 0 40px #00e0ff;
+            animation: fadeIn 2s ease;
+        }
+
+        /* Small glowing card behind message */
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            animation: slideUp 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            opacity: 0.85;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>{{ message }}</h1>
+    </div>
+    <footer>🌈 Two-Tier Flask App — Made with 💖 Flask & MySQL</footer>
+</body>
+</html>
